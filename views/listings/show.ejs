@@ -1,0 +1,86 @@
+<% layout("layouts/boilerplate") %>
+
+<div class="listing-container">
+
+    <div class="listing-card">
+
+        <img class="listing-image" src="<%= listing.image.url %>" alt="image">
+
+        <div class="listing-content">
+
+            <h3 class="listing-title"><%= listing.title %></h3>
+
+            <p class="listing-description">
+                <%= listing.description %>
+            </p>
+
+            <p class="listing-price">
+                ₹<%= listing.price.toLocaleString("en-IN") %> / night
+            </p>
+
+            <p class="listing-location">
+                <%= listing.location %>, <%= listing.country %>
+            </p>
+
+            <div class="listing-buttons">
+                <a class="edit-btn" href="/listings/<%= listing._id %>/edit">
+                    Edit
+                </a>
+
+                <form action="/listings/<%= listing._id %>?_method=DELETE" method="post">
+                    <button class="delete-btn">
+                        Delete
+                    </button>
+                </form>
+            </div>
+
+<hr>
+            <div> 
+
+                <h4>Leave a review</h4>
+
+                <form action="/listings/<%= listing._id %>/review" method="post">
+                
+                    <div>
+                        <label for="rating">Rating</label>
+                        <input type="range" min="1" max="5" name="review[rating]" id="rating">
+                    </div>
+
+                    <div>
+                        <label for="comment">Comments</label>
+                        <textarea name="review[comment]" id="comment" cols="20" rows="10"></textarea>
+                    </div>
+
+                    <button>Submit</button>
+
+                </form>
+                 
+                <h3>You are here</h3>
+                 <div id="map" style="height: 300px; width: 500px;"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+   
+
+</div>
+
+
+<link href="https://cdn.maptiler.com/maptiler-sdk-js/latest/maptiler-sdk.css" rel="stylesheet" />
+
+<script src="https://cdn.maptiler.com/maptiler-sdk-js/latest/maptiler-sdk.umd.js"></script>
+
+<script>
+    const maptoken = "<%= process.env.MAP_TOKEN %>";
+
+    maptilersdk.config.apiKey = maptoken;
+
+    const map = new maptilersdk.Map({
+        container: 'map',
+        style: maptilersdk.MapStyle.STREETS,
+        center: [16.62662018, 49.2125578],
+        zoom: 14
+    });
+</script>

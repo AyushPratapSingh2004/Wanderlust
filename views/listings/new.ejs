@@ -1,0 +1,187 @@
+<!-- 
+<% //layout("layouts/boilerplate") %>
+
+
+    
+      
+    
+    <div class="row">
+
+  <h3>Create new listing</h3>
+    <form action="/listings" method="post"   class="needs-validation" novalidate >
+
+    <div>
+                <label for="title">Title</label>
+                <input type="text" name="title" placeholder="enter title" id="title" required>
+
+    </div>
+
+    <br>
+
+    <div>
+                 <input type="text" name="description" placeholder="enter description" required>
+
+    </div>
+
+<br>
+
+    <div>
+                  <input type="text" name="image" placeholder="enter image URL link" >
+
+    </div>
+
+<br>
+
+    <div>
+                   <input type="number" name="price" placeholder="enter price" required>
+
+    </div>
+
+    <br>
+
+    <div>
+                    <input type="text" name="location" placeholder="enter location" required>
+
+    </div>
+
+    <br>
+
+    <div>
+                     <input type="text" name="country" placeholder="enter country" required>
+
+    </div>
+
+<br>
+
+             <button>Add</button>
+          
+    </form>
+
+    </div>
+
+ -->
+
+
+ <% layout("layouts/boilerplate") %>
+
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+
+      <h3 class="mb-4">Create New Listing</h3>
+
+      <form action="/listings" 
+            method="post" 
+            class="needs-validation" 
+            novalidate 
+            enctype="multipart/form-data"  >
+
+        <!-- Title -->
+        <div class="mb-3">
+          <label for="title" class="form-label">Listing Title</label>
+          <input
+            type="text"
+            id="title"
+            name="title"
+            class="form-control"
+            placeholder="Enter listing title"
+            required
+          >
+          <div class="invalid-feedback">
+            Please enter a listing title.
+          </div>
+        </div>
+
+        <!-- Description -->
+        <div class="mb-3">
+          <label for="description" class="form-label">Description</label>
+          <input
+            type="text"
+            id="description"
+            name="description"
+            class="form-control"
+            placeholder="Describe your place"
+            required
+          >
+          <div class="invalid-feedback">
+            Please provide a description.
+          </div>
+        </div>
+
+        <!-- Image -->
+        <!-- <div class="mb-3">
+          <label for="image" class="form-label">Image URL</label>
+          <input
+            type="url"
+            id="image"
+            name="image"
+            class="form-control"
+            placeholder="https://example.com/image.jpg"
+          >
+        </div> -->
+
+        <div class="mb-3">
+
+          <label for="image" class="form-label">Image</label>
+          <input
+            type="file"
+            id="image"
+            name="image"
+            class="form-control"   >
+
+        </div>
+
+        <!-- Price -->
+        <div class="mb-3">
+          <label for="price" class="form-label">Price per Night (₹)</label>
+          <input
+            type="number"
+            id="price"
+            name="price"
+            class="form-control"
+            placeholder="Enter price per night"
+            required
+          >
+          <div class="invalid-feedback">
+            Please enter a valid price.
+          </div>
+        </div>
+
+        <!-- Location -->
+        <div class="mb-3">
+          <label for="location" class="form-label">Location</label>
+          <input
+            type="text"
+            id="location"
+            name="location"
+            class="form-control"
+            placeholder="City or area"
+            required
+          >
+          <div class="invalid-feedback">
+            Please enter a location.
+          </div>
+        </div>
+
+        <!-- Country -->
+        <div class="mb-3">
+          <label for="country" class="form-label">Country</label>
+          <input
+            type="text"
+            id="country"
+            name="country"
+            class="form-control"
+            placeholder="Country name"
+            required
+          >
+          <div class="invalid-feedback">
+            Please enter a country.
+          </div>
+        </div>
+
+        <button class="btn btn-primary">Add Listing</button>
+      </form>
+
+    </div>
+  </div>
+</div>

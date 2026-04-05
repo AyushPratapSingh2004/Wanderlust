@@ -1,0 +1,114 @@
+
+    <% layout("layouts/boilerplate") %>
+
+    <form action="/listings/<%= listing._id%>?_method=PUT" method="post"  enctype="multipart/form-data">
+<!-- 
+        <input type="text" name="listing[title]" value="<%=listing.title %>">
+        <br><br>
+         <input type="text" name="listing[description]" value="<%=listing.description %>">
+         <br><br>
+          <input type="text" name="listing[image]" value="<%=listing.image %>">
+          <br><br>
+           <input type="number" name="listing[price]" value="<%=listing.price%>">
+           <br><br>
+            <input type="text" name="listing[location]" value="<%=listing.location%>">
+            <br><br>
+             <input type="text" name="listing[country]" value="<%=listing.country%>">
+             <button>edit</button> -->
+
+             
+        <!-- Title -->
+        <div class="mb-3">
+          <label for="title" class="form-label">Listing Title</label>
+          <input
+            type="text"
+            id="title"
+            name="listing[title]"
+            class="form-control"
+            value="<%=listing.title %>"
+            required
+          >
+          <div class="invalid-feedback">
+            Please enter a listing title.
+          </div>
+        </div>
+
+        <!-- Description -->
+        <div class="mb-3">
+          <label for="description" class="form-label">Description</label>
+          <input
+            type="text"
+            id="description"
+            name="listing[description]"
+            class="form-control"
+            value="<%=listing.description %>"
+            required
+          >
+          <div class="invalid-feedback">
+            Please provide a description.
+          </div>
+        </div>
+
+        <!-- Image -->
+        <div class="mb-3">
+          <label for="image" class="form-label">Image URL</label>
+          <input
+            type="file"
+            id="image"
+            name="listing[image]"
+            class="form-control"
+            value="<%=listing.image %>"
+          >
+        </div>
+
+        <!-- Price -->
+        <div class="mb-3">
+          <label for="price" class="form-label">Price per Night (₹)</label>
+          <input
+            type="number"
+            id="price"
+            name="listing[price]"
+            class="form-control"
+            value="<%=listing.price%>"
+            required
+          >
+          <div class="invalid-feedback">
+            Please enter a valid price.
+          </div>
+        </div>
+
+        <!-- Location -->
+        <div class="mb-3">
+          <label for="location" class="form-label">Location</label>
+          <input
+            type="text"
+            id="location"
+            name="listing[location]"
+            class="form-control"
+            value="<%=listing.location%>"
+            required
+          >
+          <div class="invalid-feedback">
+            Please enter a location.
+          </div>
+        </div>
+
+        <!-- Country -->
+        <div class="mb-3">
+          <label for="country" class="form-label">Country</label>
+          <input
+            type="text"
+            id="country"
+            name="listing[country]"
+            class="form-control"
+            value="<%=listing.country%>"
+            required
+          >
+          <div class="invalid-feedback">
+            Please enter a country.
+          </div>
+        </div>
+
+        <button class="btn btn-primary">Save</button>
+          
+    </form>

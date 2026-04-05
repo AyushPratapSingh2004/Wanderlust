@@ -1,0 +1,188 @@
+body{
+     
+
+    font-family: "Plus Jakarta Sans", sans-serif !important;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container{
+
+    flex:1;
+}
+.navbar{
+
+    height: 5rem;
+    background-color: white;
+}
+
+.fa-compass{
+
+    color:#fe424d;
+    font-size: 2rem;
+}
+
+.nav-link{
+
+    color: #222222 !important;
+}
+
+.f-info-links a{
+
+    text-decoration: none;
+    color : #222222;
+}
+
+.f-info-links a:hover{
+
+    text-decoration: underline;
+}
+
+.f-info-links,.f-info-socials{
+
+    width: 100%;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+
+}
+
+.f-info-socials i{
+
+     font-size: 1.2rem;
+    margin-right: 1rem;
+}
+
+
+.f-info{
+
+    height: 8rem;
+    background-color:#ebebeb ;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items:space-evenly;
+}
+
+.card{
+
+    border: none !important;
+    margin-bottom: 2rem;
+}
+
+.card-img-top{
+
+    border-radius:1rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+}
+
+.card-body {
+
+    padding: 0 !important;
+}
+
+.listing-link{
+
+    text-decoration: none;
+}
+
+.card-img-overlay{
+
+    opacity: 0;
+}
+
+.card-img-overlay:hover{
+
+    opacity: 0.2;
+    background-color: white;
+}
+
+
+/* for show.ejs */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+}
+
+.listing-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.listing-card {
+    background: white;
+    width: 500px;
+    /* border-radius: 12px; */
+    /* box-shadow: 0 4px 15px rgba(0,0,0,0.1); */
+    overflow: hidden;
+}
+
+.listing-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.listing-content {
+    padding: 20px;
+}
+
+.listing-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.listing-description {
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.listing-price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #e63946;
+    margin-bottom: 10px;
+}
+
+.listing-location {
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.listing-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.edit-btn {
+    text-decoration: none;
+    background-color: #457b9d;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 6px;
+}
+
+.edit-btn:hover {
+    background-color: #1d3557;
+}
+
+.delete-btn {
+    background-color: #e63946;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background-color: #c1121f;
+}
