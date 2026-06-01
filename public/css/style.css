@@ -74,6 +74,7 @@ body{
 
     border: none !important;
     margin-bottom: 2rem;
+    width: clamp(10rem, 20vw, 18rem);
 }
 
 .card-img-top{
@@ -188,112 +189,20 @@ body {
     background-color: #c1121f;
 }
 
+.mainlogo{
+    color: red; 
+    border: 3px solid red; 
+    padding-left: 20px;
+     width: 240px; 
+     border-radius: 30px;
+      margin-top: 20px; 
+      margin-bottom: 30px;
+}
 
 
-@media screen and (max-width: 768px) {
-
-    .navbar {
-        height: auto;
-        padding: 0.5rem 1rem;
-    }
-
-    .fa-compass {
-        font-size: 1.5rem;
-    }
-
-    .container {
-        padding: 0 10px;
-    }
-
-    /* Cards */
-    .card {
-        margin-bottom: 1rem;
-    }
-
-    .card-img-top {
-        height: 220px;
-        object-fit: cover;
-    }
-
-    /* Footer */
-    .f-info {
-        height: auto;
-        padding: 1rem;
-        text-align: center;
-    }
-
-    .f-info-links,
-    .f-info-socials {
-        width: 100%;
-        margin: 0.5rem 0;
-    }
-
-    .f-info-socials i {
-        font-size: 1rem;
-        margin: 0 0.5rem;
-    }
-
-    /* Show Page */
-    .listing-container {
-        margin-top: 20px;
-        padding: 0 10px;
-    }
-
-    .listing-card {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .listing-image {
-        height: 220px;
-    }
-
-    .listing-content {
-        padding: 15px;
-    }
-
-    .listing-title {
-        font-size: 1.5rem;
-    }
-
-    .listing-description,
-    .listing-location {
-        font-size: 0.95rem;
-    }
-
-    .listing-price {
-        font-size: 1.2rem;
-    }
-
-    .listing-buttons {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .edit-btn,
-    .delete-btn {
-        width: 100%;
-        text-align: center;
-        padding: 12px;
+@media (max-width: 768px) {
+    .mainlogo {
+        font-size: 1.2rm;
     }
 }
 
-/* Small Phones */
-@media screen and (max-width: 480px) {
-
-    .listing-title {
-        font-size: 1.3rem;
-    }
-
-    .listing-image {
-        height: 180px;
-    }
-
-    .card-img-top {
-        height: 180px;
-    }
-
-    .f-info-socials i {
-        font-size: 0.9rem;
-    }
-}
