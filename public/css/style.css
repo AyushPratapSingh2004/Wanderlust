@@ -203,6 +203,16 @@ body {
 @media (max-width: 768px) {
     .mainlogo {
         font-size: 1.2rm;
+        text-align: center;
     }
 }
 
+
+@media screen and (max-width: 768px) {
+
+    .navbar {
+        height: auto;
+        padding: 0.5rem 1rem;
+    }
+    
+}
